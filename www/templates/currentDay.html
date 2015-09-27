@@ -1,0 +1,15 @@
+<ion-view view-title="{{today}}" class='current-day'>
+  <div class="bar bar-subheader">
+    <h2 class="title">Daily Allowance<span class='pull-right'>{{totalDailyCalories}}</span></h2>
+  </div>
+  <ion-content class='has-subheader' ng-if='dailyFood.meals.length > 0'>
+    <ion-list>
+        <ion-checkbox ng-repeat="item in dailyFood.meals" ng-model="checked">{{item.name}} <span class='pull-right'>{{item.calories}}</span></ion-checkbox>
+    </ion-list>
+  </ion-content>
+  <ion-content class='has-subheader' ng-if='dailyFood.meals.length == 0'>
+    <h1 class='faded'>This is awkward!</h1>
+    <h1 class='faded'>You haven't added any food yet!</h1>
+    <h1 class='faded'>Tap <a href='#/app/planner/addToDay?date={{paramDate}}'>here</a> to add some!</h1>
+  </ion-content>
+</ion-view>

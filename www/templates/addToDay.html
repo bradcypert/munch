@@ -1,0 +1,17 @@
+<ion-view view-title="Add Meals To {{displayDate}}" class='current-day'>
+  <ion-content>
+    <ion-list>
+      <a class="item item-button-right" href='#/app/addToCookbook'>
+        Add new meal
+        <button class="button button-calm button-clear">
+          <i class="icon ion-plus"></i>
+        </button>
+      </a>
+
+      <div class="item item-divider">
+        Meals from your cookbook
+      </div>
+        <ion-checkbox ng-change='toggleItemForDay(saveDate, item)' ng-repeat="item in cookbook" ng-model="item.checked">{{item.name}} <span class='pull-right'>{{item.calories}}</span></ion-checkbox>
+    </ion-list>
+  </ion-content>
+</ion-view>

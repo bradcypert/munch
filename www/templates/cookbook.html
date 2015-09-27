@@ -1,0 +1,21 @@
+<ion-view view-title="My Cookbook">
+  <ion-content>
+    <div class="list">
+      <a class="item item-button-right" href='#/app/addToCookbook'>
+        Add New Meal
+        <button class="button button-calm button-clear">
+          <i class="icon ion-plus"></i>
+        </button>
+      </a>
+
+      <div class="item item-divider">
+        Recent Meals
+      </div>
+
+      <a class="item" href="#/app/cookbook/edit?index={{$index}}" ng-repeat="item in cookbook">
+        {{item.name}}
+      </a>
+
+    </div>
+  </ion-content>
+</ion-view>

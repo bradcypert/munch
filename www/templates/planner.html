@@ -1,0 +1,31 @@
+<ion-view view-title="Weekly Planner" class='planner width100'>
+  <div class="bar bar-subheader">
+    <h2 class="title">{{today}}</h2>
+  </div>
+    <ion-content class='has-subheader'>
+      <section class='center'>
+        <div class='day-of-the-week'>S</div>
+        <div class='day-of-the-week'>M</div>
+        <div class='day-of-the-week'>T</div>
+        <div class='day-of-the-week'>W</div>
+        <div class='day-of-the-week'>T</div>
+        <div class='day-of-the-week'>F</div>
+        <div class='day-of-the-week'>S</div>
+      </section>
+      <section class='center'>
+        <a class='day-of-the-week' ng-href='#/app/planner/addToDay?date={{item}}' ng-class='item > 23 ? "faded": item == currentDate ? "date-selected": ""' ng-repeat='item in getRow(0) track by $index'>{{item}}</a>
+      </section>
+      <section class='center'>
+        <a class='day-of-the-week' ng-href='#/app/planner/addToDay?date={{item}}' ng-class='item == currentDate ? "date-selected": ""' ng-repeat='item in getRow(1) track by $index'>{{item}}</a>
+      </section>
+      <section class='center'>
+        <a class='day-of-the-week' ng-href='#/app/planner/addToDay?date={{item}}' ng-class='item == currentDate ? "date-selected": ""' ng-repeat='item in getRow(2) track by $index'>{{item}}</a>
+      </section>
+      <section class='center'>
+        <a class='day-of-the-week' ng-href='#/app/planner/addToDay?date={{item}}' ng-class='item == currentDate ? "date-selected": ""' ng-repeat='item in getRow(3) track by $index'>{{item}}</a>
+      </section>
+      <section class='center' ng-if='isNaN(getRow(4)[0])'>
+        <a class='day-of-the-week' ng-href='#/app/planner/addToDay?date={{item}}' ng-class='item < 7 ? "faded": item == currentDate ? "date-selected": ""' ng-repeat='item in getRow(4) track by $index'>{{item}}</a>
+      </section>
+    </ion-content>
+</ion-view>

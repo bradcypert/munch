@@ -1,0 +1,44 @@
+<ion-view view-title="Add Meal">
+  <ion-content>
+    <form ng-submit="function(index)">
+      <div class="list">
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Name</span>
+          <input type="text" ng-model="item.name" placeholder="Steak 'n' Cheese">
+        </label>
+        <label class='item item-input item-stacked-label'>
+          <span class="input-label">Serving Size</span>
+          <input type="text" ng-model="item.servingSize" placeholder="8oz">
+        </label>
+        <label class='item item-input item-stacked-label'>
+          <span class="input-label">Calories</span>
+          <input type="tel" ng-model="item.calories" placeholder='500'>
+          <div class='tooltip tip-red' ng-show='item.calories >= 800'>Tip: {{item.calories}} calories for one item is quite a bit!</div>
+          <div class='tooltip tip-red' ng-show='item.calories >= 800'>Try finding a healthier alternative or reducing portion size.</div>
+          <div class='tooltip tip-yellow' ng-show='item.calories && item.calories <= 300'>Tip: {{item.calories}} calories for one item is a bit low!</div>
+          <div class='tooltip tip-yellow' ng-show='item.calories && item.calories <= 300'>Make sure the food you're adding has enough nutritional value.</div>
+        </label>
+        <label class='item item-input item-stacked-label'>
+          <span class="input-label">Protein</span>
+          <input type="text" ng-model="item.protein" placeholder="16">
+        </label>
+        <label class='item item-input item-stacked-label'>
+          <span class="input-label">Trans Fat</span>
+          <input type="tel" ng-model="item.transFat" placeholder='4'>
+          <div class='tooltip tip-red' ng-show='item.transFat >= 5'>Tip: Trans Fats aren't good for you at all.</div>
+          <div class='tooltip tip-red' ng-show='item.transFat >= 5'>Try finding food that keeps this value as low as possible.</div>
+        </label>
+      </div>
+      <div style='padding: 15px;'>
+        <button class="button button-block button-positive" ng-click='saveToCookbook({{index}})'>
+          {{command}} Meal
+        </button>
+        <button ng-if="index" class="button button-block button-outline button-assertive" ng-click='removeFromCookbook({{index}})'>
+          Delete Meal
+        </button>
+      </div>
+
+
+    </form>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,199 @@
+/* Empty. Add your own CSS if you like */
+@import url(http://fonts.googleapis.com/css?family=Oswald);
+
+.checkbox input:checked:before, .checkbox input:checked + .checkbox-icon:before, .button.button-positive {
+  background: #006FA4;
+  border-color: #006FA4;
+}
+
+.button.button-calm.button-clear{
+  color: #006FA4;
+}
+
+*, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, select, .previous-title {
+  font-family: 'Oswald', sans-serif;
+}
+
+ion-header-bar.bar.bar-stable{
+  background-color: #006FA4;
+  color: white;
+}
+
+.bar.bar-stable .title, .bar-stable .button.button-clear {
+  color: white;
+}
+
+.h2.margin0 {
+  margin: 0;
+}
+
+.h2.pad-left{
+  padding-left: 60px;
+}
+
+.planner .day-of-the-week {
+  width: 14%;
+  float: left;
+  padding: 10px 10px;
+  text-decoration: none;
+  color: #444;
+}
+
+.planner section:after, .bar:after{
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.planner .date-selected {
+  border: 1px solid #ffb8b8;
+  background-color: #ffb8b8;
+}
+
+.planner .has-header {
+  top: 95px;
+}
+
+.planner .faded {
+  opacity: 0.3;
+}
+
+.planner .has-header section {
+  line-height: 20px;
+}
+
+.planner .has-header section div {
+  font-size: 18px;
+  line-height: 48px;
+}
+
+.planner h1{
+  padding: 15px 0 5px 0;
+}
+
+.planner section{
+  padding: 5px 0 5px 0;
+}
+
+.planner section:nth-child(even){
+  background-color: #fafafa;
+}
+
+.planner > div, .current-day > div {
+  background-color: #C4E9FB;
+  border-bottom: 1px solid #ccc;
+}
+
+.center, h1.center{
+  display: block;
+  margin: 0 auto;
+  text-align:center;
+}
+
+.item-checkbox span {
+  padding-left: 45px;
+}
+
+.pull-right{
+  float: right;
+}
+
+.pull-left{
+  float: left;
+}
+
+.width50{
+  width: 50%;
+  display: block;
+  box-sizing: border-box;
+}
+
+.width75{
+  width: 75%;
+  display: block;
+  box-sizing: border-box;
+}
+
+.width100{
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+}
+
+.cf {
+  clear:both;
+}
+
+.elipses{
+  overflow: hidden;
+}
+
+.width25{
+  width:25%;
+  display:block;
+  box-sizing: border-box;
+}
+
+.borderless{
+  border: none;
+}
+
+.item-content label {
+  font-size: 1.2em;
+}
+
+.item-checkbox, .item-content {
+  padding: 10px;
+}
+
+.item-content < .main-list-item {
+  padding: 10px;
+}
+
+.settings .item-select {
+  min-height: 73px;
+}
+
+.settings .item-select {
+  padding-top: 22px;
+}
+
+.settings .item-select select {
+  top: 11px;
+  font-size: 16px;
+}
+
+span[class^='ion']{
+  font-size: 24px;
+  position: relative;
+  top: 1px;
+  padding-right: 12px;
+}
+
+.faded {
+  color: #555;
+  opacity: 0.4;
+  padding-top: 30px;
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.tooltip{
+  font-size: 14px;
+  line-height: 30px;
+  padding-top: 2px;
+  padding: 5px 5px;
+}
+
+.tip-red {
+  color: #DE4F4F;
+}
+
+.tip-green {
+  color: #3A9D3A;
+}
+
+.tip-yellow {
+  color: #ded14f;
+}
